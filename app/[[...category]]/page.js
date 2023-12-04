@@ -1,0 +1,27 @@
+import Movies from "@/mocks/movies.json";
+import HomeContainer from "@/containers/home/page";
+
+async function delay(ms) {
+  return new Promise((resolve) => setTimeout(resolve, ms));
+}
+
+
+async function Home({ params }) {
+  await delay(2000)
+  let selectedCategory;
+  if (params.category && params.category.length > 0) {
+    selectedCategory = true;
+  }
+
+  return (
+    <>
+      <HomeContainer
+        selectedCategory={{
+          id: params.category?.[0] ?? "",
+          movies: selectedCategory ? Movies.results.slice(0, 7) : [],
+        }}
+      />
+    </>
+  );
+}
+export default Home;

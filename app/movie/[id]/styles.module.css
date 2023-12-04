@@ -1,0 +1,44 @@
+.container {
+  width: 80%;
+  margin: auto;
+  margin-top: 5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: 600;
+}
+
+.subtitle {
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+  font-size: 1.125rem;
+  color: #e53e3e;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.description {
+  font-size: 1rem;
+}
+
+
+.linksContainer {
+  display: flex;
+  gap: 1rem;
+}
+
+.link {
+  text-decoration: underline;
+  color: #3182ce;
+  transition: color 0.3s;
+}
+
+.link:hover {
+  color: #e53e3e;
+}
